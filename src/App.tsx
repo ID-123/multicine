@@ -1,10 +1,15 @@
+import { Layout } from "./Layout";
 import { ScreenMode, Show } from "./modules/counter";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   return (
     <div className="flex flex-col">
-      <ScreenMode />
-      <Show />
+      <Layout>
+        <HomePage />
+        <ScreenMode />
+        <Show />
+      </Layout>
     </div>
   );
 }
