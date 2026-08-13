@@ -1,14 +1,11 @@
 import { Layout } from "./Layout";
-import { ScreenMode, Show } from "./modules/counter";
-import HomePage from "./pages/HomePage/HomePage";
+import { AppRouter } from "./routes/routes";
 
 function App() {
   return (
     <div className="flex flex-col">
       <Layout>
-        <HomePage />
-        <ScreenMode />
-        <Show />
+        <AppRouter />
       </Layout>
     </div>
   );
