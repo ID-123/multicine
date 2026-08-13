@@ -1,6 +1,6 @@
-import DashboardPage from "@/pages/DashboardPage/DashboardPage";
+import { DashboardPage } from "@/pages/DashboardPage/DashboardPage";
 import { HomePage } from "@/pages/HomePage/HomePage";
-import LoginPage from "@/pages/LoginPage/LoginPage";
+import { LoginPage } from "@/pages/LoginPage/LoginPage";
 import { Route, Routes } from "react-router";
 import { Layout } from "@/Layout";
 
