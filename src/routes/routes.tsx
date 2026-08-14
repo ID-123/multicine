@@ -11,10 +11,19 @@ import { Layout } from "@/Layout";
 
 export async function loginAction({ request }: ActionFunctionArgs) {
   const formData = await request.formData();
+
   const email = formData.get("email");
   const password = formData.get("password");
 
-  console.log(email, password);
+  const validEmail = "admin@multicine.com";
+  const validPassword = "123456";
+
+  if (email !== validEmail || password !== validPassword) {
+    return {
+      error: "Credenciales incorrectas",
+    };
+  }
+
   return redirect("/dashboard");
 }
 
