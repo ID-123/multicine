@@ -1,10 +1,18 @@
-import { Layout } from "./Layout";
+import { useState } from "react";
+
+import { AppRouter } from "@/routes/routes";
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   return (
-    <div>
-      <Layout />
-    </div>
+    <>
+      <button onClick={() => setIsAuthenticated(!isAuthenticated)}>
+        Change Auth
+      </button>
+      <p>{isAuthenticated ? "Auth" : "Not auth"}</p>
+
+      <AppRouter isAuthenticated={isAuthenticated} />
+    </>
   );
 }
 

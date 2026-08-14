@@ -1,10 +1,12 @@
 import { DashboardPage } from "@/pages/DashboardPage/DashboardPage";
 import { HomePage } from "@/pages/HomePage/HomePage";
 import { LoginPage } from "@/pages/LoginPage/LoginPage";
-import { Route, Routes } from "react-router";
+import { Navigate, Route, Routes } from "react-router";
 import { Layout } from "@/Layout";
 
-export function AppRouter() {
+type AppRouterProps = { isAuthenticated: boolean };
+
+export function AppRouter({ isAuthenticated }: AppRouterProps) {
   return (
     <Routes>
       <Route element={<Layout />}>
@@ -13,7 +15,10 @@ export function AppRouter() {
 
       <Route path="/login" element={<LoginPage />} />
 
-      <Route path="/dashboard" element={<DashboardPage />} />
+      <Route
+        path="/dashboard"
+        element={isAuthenticated ? <DashboardPage /> : <Navigate to="/login" />}
+      />
     </Routes>
   );
 }
