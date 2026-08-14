@@ -1,17 +1,20 @@
-import { Form } from "react-router";
+type LoginPageProps = { setIsAuthenticated: (value: boolean) => void };
 
-export function LoginPage() {
+function handleSubmit(event: SubmitEvent) {
+  event.preventDefault();
+  setIsAuthenticated(true);
+  navigate("/dashboard");
+}
+
+export function LoginPage({ setIsAuthenticated }: LoginPageProps) {
   return (
     <section>
-      <h1>Login</h1>
-
-      <Form method="post">
-        <input type="email" name="email" placeholder="Email" />
-
-        <input type="password" name="password" placeholder="Password" />
-
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
+        <input type="email" />
+        <input type="password" />
         <button type="submit">Login</button>
-      </Form>
+      </form>
     </section>
   );
 }
