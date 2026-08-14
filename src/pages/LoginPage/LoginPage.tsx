@@ -1,20 +1,22 @@
-type LoginPageProps = { setIsAuthenticated: (value: boolean) => void };
+import { Form } from "react-router";
 
-function handleSubmit(event: SubmitEvent) {
-  event.preventDefault();
-  setIsAuthenticated(true);
-  navigate("/dashboard");
-}
-
-export function LoginPage({ setIsAuthenticated }: LoginPageProps) {
+export function LoginPage() {
   return (
-    <section>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="email" />
-        <input type="password" />
-        <button type="submit">Login</button>
-      </form>
-    </section>
+    <main className="flex min-h-screen items-center justify-center">
+      <section className="w-full max-w-md">
+        <h2>Login</h2>
+        <Form method="post" className="flex flex-col gap-4">
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" required />
+          </label>
+          <button type="submit">Login</button>
+        </Form>
+      </section>
+    </main>
   );
 }
