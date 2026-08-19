@@ -7,7 +7,7 @@ function navLinkStyles({ isActive }: { isActive: boolean }) {
 export function Navbar() {
   return (
     <header>
-      <nav className="flex justify-evenly p-2">
+      <nav className="flex justify-end p-2">
         <ul className="flex flex-row list-none gap-2 ">
           <li>
             <NavLink className={navLinkStyles} to="/">
@@ -15,13 +15,13 @@ export function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink className={navLinkStyles} to="/login">
-              Login
+            <NavLink className={navLinkStyles} to="/dashboard">
+              Dashboard
             </NavLink>
           </li>
           <li>
-            <NavLink className={navLinkStyles} to="/dashboard">
-              Dashboard
+            <NavLink className={navLinkStyles} to="/login">
+              Login
             </NavLink>
           </li>
         </ul>
