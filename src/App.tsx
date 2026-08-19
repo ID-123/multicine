@@ -11,7 +11,7 @@ function App() {
       </button>
       <p>{isAuthenticated ? "Auth" : "Not auth"}</p>
 
-      <AppRouter isAuthenticated={isAuthenticated} />
+      <AppRouter />
     </>
   );
 }
