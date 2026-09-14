@@ -78,8 +78,6 @@ npm run build
 npm run lint
 ```
 
-> Nota: el `package.json` recibido no incluye Jest/React Testing Library, aunque el backlog los recomienda y define pruebas mínimas. Por eso este MVP deja `src/tests/` preparado, pero no inventa dependencias que no estaban en el package proporcionado. La suite de pruebas debe incorporarse cuando se decida el runner compatible. fileciteturn0file0L1294-L1304
-
 ## Próximos incrementos
 
 1. Registro y autenticación real con refresh token.
