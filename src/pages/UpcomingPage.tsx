@@ -1,0 +1,2 @@
+import { Link } from 'react-router'
+export function UpcomingPage() { return <section className="content-section"><span className="eyebrow">Próximamente</span><h1>Lo que viene.</h1><div className="upcoming"><div><span>18 SEP</span><h2>Neon Horizon</h2><p>Preventa y notificaciones disponibles próximamente.</p><Link to="/movies/1" className="text-link">Ver detalle →</Link></div><div><span>25 SEP</span><h2>Orbit Kids 2</h2><p>Aventura familiar para toda la sala.</p></div></div></section> }
