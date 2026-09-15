@@ -1,0 +1,226 @@
+:global(.icon-button) {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 9px;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+
+:global(.button) {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 18px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+:global(.button:disabled) {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+:global(.button-primary) {
+  background: var(--primary);
+  color: #fff;
+}
+
+:global(.button-primary:hover) {
+  background: var(--primary-2);
+}
+
+:global(.button-secondary) {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+:global(.button-small) {
+  padding: 8px 13px;
+  background: var(--text);
+  color: var(--bg);
+}
+
+:global(.full) {
+  width: 100%;
+}
+
+:global(.eyebrow) {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+:global(.movie-card) {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+:global(.movie-card > img) {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+:global(.movie-card-body) {
+  padding: 18px;
+}
+
+:global(.movie-card h2) {
+  margin: 8px 0 4px;
+  font-size: 1.65rem;
+}
+
+:global(.movie-card p),
+:global(.muted) {
+  color: var(--muted);
+}
+
+:global(.eyebrow + h2) {
+  margin-top: 8px;
+}
+
+:global(.chips) {
+  display: flex;
+  gap: 6px;
+  margin: 13px 0;
+}
+
+:global(.chips span) {
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: 0.72rem;
+}
+
+:global(.showtimes) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 14px 0;
+}
+
+:global(.showtimes button),
+:global(.showtimes .button) {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  padding: 7px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+:global(.showtimes button:hover) {
+  background: var(--primary);
+  color: #fff;
+}
+
+:global(.text-link) {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+:global(.state-card) {
+  min-height: 180px;
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  color: var(--muted);
+}
+
+:global(.state-error) {
+  color: var(--text);
+}
+
+:global(.spinner) {
+  width: 26px;
+  height: 26px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+:global(.skeleton-card) {
+  height: 520px;
+  border-radius: 16px;
+  background: linear-gradient(
+    90deg,
+    var(--surface) 25%,
+    var(--surface-2) 50%,
+    var(--surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: shine 1.2s infinite;
+}
+
+:global(.modal-backdrop) {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 30;
+}
+
+:global(.modal) {
+  width: min(500px, 100%);
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 25px 90px rgba(0, 0, 0, 0.35);
+}
+
+:global(.modal-head) {
+  display: flex;
+  justify-content: space-between;
+}
+
+:global(.modal h2) {
+  font-size: 2.2rem;
+  margin: 8px 0;
+}
+
+:global(.modal label),
+:global(.auth-card label) {
+  display: grid;
+  gap: 6px;
+  margin: 18px 0;
+  font-weight: 700;
+}
+
+:global(.modal select),
+:global(.auth-card input) {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--text);
+  outline-color: var(--primary);
+}
+
+:global(.form-error) {
+  color: #d83a3a;
+  font-size: 0.9rem;
+}

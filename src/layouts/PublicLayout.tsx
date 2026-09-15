@@ -7,7 +7,7 @@ export function PublicLayout() {
       <main>
         <Outlet />
       </main>
-      <footer>Multicine · MVP de portafolio · React + TypeScript</footer>
+      <footer>Multicine · React + TypeScript</footer>
     </div>
   )
 }
