@@ -62,7 +62,7 @@ VITE_USE_MOCK_API=true
 
 Para conectar el backend, copia `.env.example` a `.env` y cambia `VITE_USE_MOCK_API=false`.
 
-Los endpoints definidos por el backlog usan una API versionada bajo `/api/v1`, con autenticación para rutas privadas y manejo uniforme de errores HTTP. fileciteturn0file0L1221-L1267
+Los endpoints definidos por el backlog usan una API versionada bajo `/api/v1`, con autenticación para rutas privadas y manejo uniforme de errores HTTP.
 
 ## Ejecutar
 

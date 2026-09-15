@@ -1,7 +1,12 @@
 import type { Session } from '@/types/auth'
 
 const demoSession: Session = {
-  user: { id: 'demo', name: 'Visitante demo', email: 'demo@multicine.local', role: 'user' },
+  user: {
+    id: 'demo',
+    name: 'Visitante demo',
+    email: 'demo@multicine.local',
+    role: 'user',
+  },
   accessToken: 'demo-token',
 }
 
